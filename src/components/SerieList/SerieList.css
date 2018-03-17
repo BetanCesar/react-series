@@ -1,0 +1,88 @@
+.bottomSection{
+    background-color: rgb(233,235,238);
+    margin-top: -15px;
+}
+
+.listaSerie{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: -10px 0px 0px 0px;
+}
+
+.series{
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.titleSeries{
+    padding: 10px 0px 0px 20px;
+    display: inline-block;
+}
+
+.idSerie{
+    border: #fafafa 1px solid;
+    background-color: rgb(233,235,238);
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 4px;
+    font-weight: bold;
+}
+
+.alert-success:before{
+    content: "Serie agregada correctamente";
+    opacity: 1;
+}
+.alert-success{
+    position: relative;
+    padding: 3px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: white;
+    background-color: rgb(39,203,42);
+    width: 20%;
+    margin-left: 20px;
+    display: inline-block;
+    bottom: 7px;
+    font-size: 14px;
+}
+.alert-successs:before{
+    content: "Serie eliminada correctamente";
+    opacity: 1;
+}
+.alert-successs{
+    position: relative;
+    padding: 3px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: white;
+    background-color: rgb(39,203,42);
+    width: 20%;
+    margin-left: 20px;
+    display: inline-block;
+    bottom: 7px;
+    font-size: 14px;
+}
+.alert-danger:before{
+    content: "La serie ya existe";
+    opacity: 1;
+}
+.alert-danger{
+    position: relative;
+    padding: 3px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: white;
+    background-color: red;
+    width: 20%;
+    margin-left: 20px;
+    display: inline-block;
+    bottom: 7px;
+    font-size: 14px;
+}

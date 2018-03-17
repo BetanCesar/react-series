@@ -1,0 +1,71 @@
+.actor-list{
+    position: relative;
+}
+
+.btnRemove{
+    color: #d9534f;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.list{
+    width: 360px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.list h1 {
+    color: #333;
+    font-weight: 300;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.list ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    height: 326px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.list ul li{
+    border: 1px solid #CCC;
+    padding: 15px;
+    background-color: #FEFEFE;
+    min-width: 250px;
+    min-height: 70px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+}
+
+.name {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.character{
+    display: block;
+    font-weight: 200;
+    font-size: 16px;
+    padding-top:5px;
+}
+
+.photo{
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+    margin-right:10px;
+}
+
+.photo img{
+    display: inline-block;
+    width: 100%
+}

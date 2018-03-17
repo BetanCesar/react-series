@@ -1,0 +1,29 @@
+.list{
+    border: 1px solid #CCC;
+    padding: 15px;
+    background-color: #FEFEFE;
+    min-width: 300px;
+    min-height: 70px;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    margin: 5px;
+    width: 25%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    display: inline-table;
+    position: relative;
+}
+
+.deleteButton{
+    background-color: #ed0a0a;
+    border: none;
+    border-radius: 11px;
+    padding: 2px 5px;
+    color: #fafafa;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
