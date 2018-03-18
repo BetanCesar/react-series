@@ -22,5 +22,35 @@ const Actor = (actor) => {
             </li>
         </div>);
 }
+const actorPhotoValidator = (props, propName, componentName) => {
+    if(typeof props[propName] !== 'string' || !/(https?:\/\/.*\.(?:png|jpg|svg))/i.test(props[propName])){
+        return new Error(
+            'Invalid prop `' + propName + '` supplied to' +
+            ' `' + componentName + '`. Must be a valid url to an image of type png, jpg or svg.'
+        );
+    }
+};
+const actorTextValidator = (props, propName, componentName) => {
+    if(typeof props[propName] !== 'string' || props[propName].trim().length < 3){
+        return new Error(
+            'Invalid prop `' + propName + '` supplied to' +
+            ' `' + componentName + '`. Must be a text with more than 3 characters'
+        );
+    }
+};
+Actor.propTypes ={
+    id: PropTypes.number.isRequired,
+    name: actorTextValidator,
+    character: actorTextValidator,
+    photo: actorPhotoValidator,
+    onDeleteActor: PropTypes.func.isRequired
+};
+
+Actor.defaultProps = {
+    id: 0,
+    name: ["name"],
+    character: ["character"],
+    photo: ["none"]
+}
 
 export default Actor;

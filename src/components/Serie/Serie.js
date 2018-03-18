@@ -29,5 +29,25 @@ class Serie extends Component{
     }
 
 }
+const actorTextValidator = (props, propName, componentName) => {
+    if(typeof props[propName] !== 'string' || props[propName].trim().length < 3){
+        return new Error(
+            'Invalid prop `' + propName + '` supplied to' +
+            ' `' + componentName + '`. Must be a text with more than 3 characters'
+        );
+    }
+};
+Serie.propTypes ={
+    id: PropTypes.number.isRequired,
+    name: actorTextValidator,
+    character: actorTextValidator,
+    onDelete: PropTypes.func.isRequired
+};
+
+Serie.defaultProps = {
+    id: 0,
+    name: ["name"],
+    serie: []
+}
 
 export default Serie;

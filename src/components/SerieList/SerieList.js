@@ -19,5 +19,26 @@ const SerieList = ({ series , onDelete=f=>f }) =>
         </div>
     </div>
 
+const actorTextValidator = (props, propName, componentName) => {
+    if(typeof props[propName] !== 'string' || props[propName].trim().length < 1){
+        return new Error(
+            'Invalid prop `' + propName + '` supplied to' +
+            ' `' + componentName + '`. Must be a text with more than 3 characters'
+        );
+    }
+};
+
+SerieList.propTypes = {
+    series: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: actorTextValidator
+    })),
+    onDeleteSerie: PropTypes.func.isRequired
+}
+
+SerieList.defaultProps = {
+    series: []
+}
+
 
 export default SerieList;

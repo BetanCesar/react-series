@@ -12,9 +12,15 @@ class AddSerieForm extends Component{
     submit(e){
         e.preventDefault();
         const {_nombre, _id} = this.refs;
-        this.props.onNewSerie(_nombre.value, _id.value);
-        _nombre.value = "";
-        _id.value = "";
+        if(_nombre.value.trim().length < 3){
+            alert("El nombre debe de tener al menos 3 caracteres");
+        }else if(!/^\d+$/.test(_id.value)) {
+            alert("El id debe ser un valor numérico");
+        }else{
+            this.props.onNewSerie(_nombre.value, _id.value);
+            _nombre.value = "";
+            _id.value = "";
+        }
     }
 
     render(){
