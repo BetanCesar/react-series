@@ -1,6 +1,7 @@
 import React from 'react';
 import './Actor.css'
 import PropTypes from "prop-types";
+import { NavLink } from 'react-router-dom';
 
 const Actor = (actor) => {
 
@@ -12,15 +13,18 @@ const Actor = (actor) => {
     }
 
     return (
-        <div className="actor-list">
-            <li>
-                <div className="photo">
-                    <img alt={actor.person.name} src={isImageNull ? null : actor.character.image.medium}/>
-                </div>
-                <span className="name">{actor.person.name}</span>
-                <span className="character">{actor.character.name}</span>
-            </li>
-        </div>);
+        <NavLink to ={'/series/'+actor.serieId+'/actor/'+actor.person.id}>
+            <div className="actor-list">
+                <li>
+                    <div className="photo">
+                        <img alt={actor.person.name} src={isImageNull ? null : actor.character.image.medium}/>
+                    </div>
+                    <span className="name">{actor.person.name}</span>
+                    <span className="character">{actor.character.name}</span>
+                </li>
+            </div>
+        </NavLink>
+            );
 }
 const actorPhotoValidator = (props, propName, componentName) => {
     if(typeof props[propName] !== 'string' || !/(\/\/.*\.(?:png|jpg|svg))/i.test(props[propName])){

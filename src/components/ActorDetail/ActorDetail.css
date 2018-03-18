@@ -1,0 +1,62 @@
+.actorInfo{
+    height: 150px;
+    width: 400px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    padding: 15px;
+    background-color: #FEFEFE;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    display: inline-block;
+    float: left;
+}
+.actorDetails{
+    vertical-align: center;
+    padding-top: 32px;
+}
+.actorName{
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+}
+.actorGender{
+    font-size: 14px;
+    display: block;
+}
+.actorBirthday{
+    font-size: 15px;
+    display: block;
+}
+.actorImage{
+    height: 150px;
+    width: 160px;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+    margin-right:10px;
+    border-radius: 50%;
+}
+.actorImage img{
+    display: inline-block;
+    width: 100%;
+}
+.shows{
+    height: 150px;
+    width: 600px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    padding: 15px;
+    background-color: #FEFEFE;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+.shows h3{
+    margin: 0px 0px 15px 0px;
+}

@@ -20,10 +20,18 @@
     font-weight: 300;
     padding-left: 10px;
     text-align: center;
+    max-height: 43px;
 }
 .list a {
     color: #333;
     text-decoration: none;
+}
+
+.list ul a{
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+    color:black;
 }
 
 .list ul{
@@ -33,6 +41,7 @@
     height: 326px;
     overflow: hidden;
     overflow-y: scroll;
+    max-height: 283px;
 }
 
 .list ul li{
@@ -50,13 +59,13 @@
 .name {
     display: block;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .character{
     display: block;
     font-weight: 200;
-    font-size: 16px;
+    font-size: 15px;
     padding-top:5px;
 }
 

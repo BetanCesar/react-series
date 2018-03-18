@@ -1,6 +1,5 @@
 .listDetail{
     width: 100%;
-    padding: 30px 30px;
 }
 
 .listDetail h1 {
@@ -17,7 +16,7 @@
 .listDetail ul{
     list-style: none;
     margin: 0px;
-    padding: 0px;
+    padding: 30px;
     height: 326px;
 }
 
@@ -38,16 +37,19 @@
     width: 230px;
     float: left;
     margin-right: 40px;
+    height: 101px;
+    margin-top: 10px;
 }
 
 .headDetail{
     width: 100%;
     background-color: white;
-    padding: 20px;
+    padding: 20px 0px;
 }
 .headDetail a{
     color: rgb(85, 203, 160);
     margin-right: 5px;
+    margin-left: 20px;
 }
 .headDetail span{
     font-size: 22px;

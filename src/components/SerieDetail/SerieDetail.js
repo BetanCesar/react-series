@@ -20,7 +20,8 @@ class SerieDetail extends Component{
         axios.get("http://api.tvmaze.com/shows/"+this.state.seriesId+"/cast")
             .then(res => {
                 this.setState({actors: res.data});
-            })
+            });
+        console.log(this.state.actors);
     }
 
     render(){
@@ -30,7 +31,7 @@ class SerieDetail extends Component{
                     <NavLink to ={'/'}>Regresar</NavLink><span>{this.state.seriesName}</span>
                 </div>
                 <div className='listDetail'>
-                    <ActorList actors={this.state.actors} />
+                    <ActorList actors={this.state.actors} serieId={this.state.seriesId} />
                 </div>
             </div>
         );
