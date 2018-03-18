@@ -15,7 +15,6 @@ class ActorDetail extends Component{
             seriesName: serieName, country: []};
     }
 
-
     componentWillMount(){
         axios.get("http://api.tvmaze.com/people/"+this.state.actorId)
             .then(res => {
@@ -40,13 +39,16 @@ class ActorDetail extends Component{
                 <div>
                     <div className='actorInfo'>
                         <div className='actorImage'>
-                            {console.log(this.state.actor.image)}
-                            <img src={this.state.actor.image} alt={this.state.actor.name} />
+                            <img src={checkNull(this.state.actor.image) ? 'Sin Imagen' :  this.state.actor.image.medium}
+                                 alt={this.state.actor.name} />
                         </div>
                         <div className='actorDetails'>
                             <span className='actorName'>{this.state.actor.name}</span>
                             <span className='actorGender'>{this.state.actor.gender}</span>
                             <span className='actorBirthday'>{this.state.actor.birthday}</span>
+                            <span className='actorGender'>
+                                {checkNull(this.state.actor.country) ? 'Sin Imagen' :  this.state.actor.country.name}
+                            </span>
                         </div>
                     </div>
                     <div className='shows'>
@@ -54,7 +56,10 @@ class ActorDetail extends Component{
                         <ul>
                             <div className="actor-list">
                                 {this.state.shows.map(function(object, i){
-                                    return <li>{object._embedded.show.name}</li>;
+                                    return <li>
+                                            {checkNull(object._embedded.show.premiered) ? 'S.F.' :  object._embedded.show.premiered.slice(0,4)} -
+                                            {checkNull(object._embedded.show.name) ? 'S.N.' :  object._embedded.show.name}
+                                        </li>;
                                 })}
                             </div>
                         </ul>
@@ -63,7 +68,16 @@ class ActorDetail extends Component{
             </div>
         );
     }
+}
 
+const checkNull = (object) => {
+    let isNull;
+    if (object == null) {
+        isNull = true;
+    } else {
+        isNull = false;
+    }
+    return isNull;
 }
 
 export default ActorDetail;

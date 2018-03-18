@@ -44,7 +44,6 @@
     width: 100%;
 }
 .shows{
-    height: 150px;
     width: 600px;
     margin-left: 20px;
     margin-top: 20px;
@@ -58,5 +57,15 @@
     display: inline-block;
 }
 .shows h3{
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 15px 10px;
+}
+.shows ul{
+    list-style: none;
+    padding-left: 10px;
+}
+.shows ul li{
+    border-bottom: 1px solid rgb(233,235,238);
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
 }
