@@ -3,6 +3,7 @@ import ActorList from '../ActorList/index';
 import axios from 'axios';
 import "./Serie.css";
 import PropTypes from "prop-types";
+import { NavLink } from 'react-router-dom';
 
 class Serie extends Component{
 
@@ -22,7 +23,7 @@ class Serie extends Component{
         return (
             <div className='list'>
                 <button className="deleteButton" onClick={() => this.props.onDelete(this.props.id)}>X</button>
-                <h1>{this.props.name}<span className="idSerie">{this.props.id}</span></h1>
+                <h1><NavLink to ={'/serie/'+this.props.id}>{this.props.name}<span className="idSerie">{this.props.id}</span></NavLink></h1>
                 <ActorList actors={this.state.actors} />
             </div>
         )

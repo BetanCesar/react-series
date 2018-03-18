@@ -1,0 +1,55 @@
+.listDetail{
+    width: 100%;
+    padding: 30px 30px;
+}
+
+.listDetail h1 {
+    color: #333;
+    font-weight: 300;
+    padding-left: 10px;
+    text-align: center;
+}
+.listDetail a {
+    color: #333;
+    text-decoration: none;
+}
+
+.listDetail ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    height: 326px;
+}
+
+.listDetail ul li{
+    border: 1px solid #CCC;
+    padding: 15px;
+    background-color: #FEFEFE;
+    width: 230px;
+    height: 70px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    float: left;
+}
+
+.listDetail ul .actor-list{
+    width: 230px;
+    float: left;
+    margin-right: 40px;
+}
+
+.headDetail{
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+}
+.headDetail a{
+    color: rgb(85, 203, 160);
+    margin-right: 5px;
+}
+.headDetail span{
+    font-size: 22px;
+    font-weight: bold;
+}

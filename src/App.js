@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Home from './components/Home/index'
+import SerieDetail from './components/SerieDetail/index'
 
 class App extends Component {
 
@@ -9,9 +10,12 @@ class App extends Component {
         return (
             <div className="main">
                 <BrowserRouter>
-                    <Route exact path="/" component={Home} />
-                    {/*<Route path="/serie/:id" component={} />
-                    <Route path="/serie/:serieId/actor/:id" component={} />*/}
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route path="/serie/:id" component={SerieDetail} />
+                        {/*<Route path="/serie/:serieId/actor/:id" component={} />*/}
+                        <Redirect from='*' to='/' />
+                    </Switch>
                 </BrowserRouter>
             </div>
         );
