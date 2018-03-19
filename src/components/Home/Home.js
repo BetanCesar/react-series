@@ -8,10 +8,15 @@ class Home extends Component {
 
     constructor(props){
         super(props);
-        let series = JSON.parse(localStorage.getItem('series'));
+        let series = series = JSON.parse(localStorage.getItem('series'));
+        if(series == null){
+            series = [{id:"82", name:"Game of Thrones"}];
+            localStorage.setItem('series', JSON.stringify({series}));
+        }
+        series = JSON.parse(localStorage.getItem('series'));
         this.state = series;
         this.addSerie = this.addSerie.bind(this);
-        this.deleteSerie = this.deleteSerie.bind(this)
+        this.deleteSerie = this.deleteSerie.bind(this);
     }
 
     addSerie(name, id){
