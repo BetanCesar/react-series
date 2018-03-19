@@ -16,17 +16,15 @@ class Serie extends Component{
         axios.get("http://api.tvmaze.com/shows/"+this.props.id+"/cast")
             .then(res => {
                 this.setState({actors: res.data, status: res.status});
-                console.log(this.state.status);
             })
             .catch(error => {
                 this.setState({status: error.response.status});
-                console.log(this.state.status);
             });
     }
 
     render(){
         return (
-            <div className={checkStatusError(this.state.status) ? 'errorList list' :  'list'} >
+            <div id='serieList' className={checkStatusError(this.state.status) ? 'errorList listE' :  'list successList'} >
                 <button className="deleteButton" onClick={() => this.props.onDelete(this.props.id)}>X</button>
                 <h1><NavLink to ={'/serie/'+this.props.id}>{this.props.name}<span className="idSerie">{this.props.id}</span></NavLink></h1>
                 {
@@ -35,11 +33,19 @@ class Serie extends Component{
             </div>
         )
     }
+    componentDidMount(){
+        setTimeout(function(){
+            let element = document.getElementsByClassName("list");
+            Array.prototype.forEach.call(element, function(el) {
+                el.setAttribute("class", "list");
+            });
+        }, 3000);
+    }
 
 }
 const checkStatusError = (object) => {
     let isError;
-    if (object == 404) {
+    if (object === 404) {
         isError = true;
     } else {
         isError = false;

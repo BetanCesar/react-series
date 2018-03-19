@@ -1,4 +1,4 @@
-.list{
+.listE, .list{
     border: 1px solid #CCC;
     padding: 15px;
     background-color: #FEFEFE;
@@ -35,4 +35,7 @@
 .errorSpan{
     font-size: 18px;
     color: rgb(210,51,62);
+}
+.successList{
+    background-color: rgb(255,251,230);
 }

@@ -16,8 +16,8 @@ class Home extends Component {
 
     addSerie(name, id){
         let a = [];
-        a = this.state.series.filter(serie => serie.id == id);
-        if(a[0] != undefined){
+        a = this.state.series.filter(serie => serie.id === id);
+        if(a[0] !== undefined){
             document.getElementById("message").setAttribute("class", "alert-danger");
             setTimeout(function(){
                 document.getElementById("message").removeAttribute("class");

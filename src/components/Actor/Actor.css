@@ -9,20 +9,20 @@
     right: 15px;
 }
 
-.list{
+.list, .listE{
     width: 360px;
     padding: 20px;
     margin: 0 auto;
 }
 
-.list h1 {
+.list h1 , .listE h1 {
     color: #333;
     font-weight: 300;
     padding-left: 10px;
     text-align: center;
     max-height: 43px;
 }
-.list a {
+.list a , .listE a {
     color: #333;
     text-decoration: none;
 }

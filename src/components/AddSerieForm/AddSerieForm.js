@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import "./AddSerieForm.css";
-import PropTypes from "prop-types";
 
 class AddSerieForm extends Component{
 
