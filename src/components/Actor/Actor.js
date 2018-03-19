@@ -27,7 +27,7 @@ const Actor = (actor) => {
             );
 }
 const actorPhotoValidator = (props, propName, componentName) => {
-    if(typeof props[propName] !== 'string' || !/(\/\/.*\.(?:png|jpg|svg))/i.test(props[propName])){
+    if(typeof props[propName] !== 'string'){
         return new Error(
             'Invalid prop `' + propName + '` supplied to' +
             ' `' + componentName + '`. Must be a valid image of type png, jpg or svg.'

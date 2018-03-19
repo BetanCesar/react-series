@@ -27,3 +27,12 @@
     right: 10px;
     top: 10px;
 }
+.errorList{
+    background-color: rgb(254,228,224);
+    text-align: center;
+    height: 369px;
+}
+.errorSpan{
+    font-size: 18px;
+    color: rgb(210,51,62);
+}

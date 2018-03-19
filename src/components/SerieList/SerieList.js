@@ -33,7 +33,7 @@ SerieList.propTypes = {
         id: PropTypes.number.isRequired,
         name: actorTextValidator
     })),
-    onDeleteSerie: PropTypes.func.isRequired
+    onDelete: PropTypes.func.isRequired
 }
 
 SerieList.defaultProps = {

@@ -38,5 +38,22 @@ class SerieDetail extends Component{
     }
 
 }
+const serieNameValidator= (props, propName, componentName) => {
+    if(typeof props[propName] !== 'string' || props[propName].trim().length < 3){
+        return new Error(
+            'Invalid prop `' + propName + '` supplied to' +
+            ' `' + componentName + '`. Must be a text with more than 3 characters'
+        );
+    }
+};
+SerieDetail.propTypes ={
+    id: PropTypes.number.isRequired,
+    name: serieNameValidator
+};
+
+SerieDetail.defaultProps = {
+    id: 0,
+    name: ["name"]
+}
 
 export default SerieDetail;

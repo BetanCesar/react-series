@@ -78,6 +78,24 @@ const checkNull = (object) => {
         isNull = false;
     }
     return isNull;
+};
+const actorTextValidator = (props, propName, componentName) => {
+    if(typeof props[propName] !== 'string' || props[propName].trim().length < 3){
+        return new Error(
+            'Invalid prop `' + propName + '` supplied to' +
+            ' `' + componentName + '`. Must be a text with more than 3 characters'
+        );
+    }
+};
+ActorDetail.propTypes ={
+    id: PropTypes.number.isRequired,
+    name: actorTextValidator
+};
+
+ActorDetail.defaultProps = {
+    id: 0,
+    name: ["name"]
 }
+
 
 export default ActorDetail;
